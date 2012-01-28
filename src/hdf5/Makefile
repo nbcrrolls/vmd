@@ -1,0 +1,33 @@
+#
+# $Id: Makefile,v 1.1 2012/01/28 03:09:37 nadya Exp $
+#
+# @Copyright@
+# @Copyright@
+#
+# $Log: Makefile,v $
+# Revision 1.1  2012/01/28 03:09:37  nadya
+# initial, moving from cadd/
+#
+
+PKGROOT		= /opt/vmd
+REDHAT.ROOT     = $(CURDIR)/../../
+-include $(ROCKSROOT)/etc/Rules.mk
+include Rules.mk
+
+HDF5FILES = bin  COPYING  include  lib  README  RELEASE.txt  share
+
+build:
+	gunzip -c $(NAME)-$(VERSION)-$(EXT).tar.gz | $(TAR) -xf -
+	cd patch-files && find . -type f | grep -v CVS | cpio -pduv ../
+	
+install::
+	mkdir -p $(ROOT)/$(PKGROOT)
+	mkdir -p $(ROOT)/etc/ld.so.conf.d
+	echo $(PKGROOT)/lib > $(ROOT)/etc/ld.so.conf.d/hdf5.conf
+	(                                              \
+		cd $(NAME)-$(VERSION)-$(EXT);          \
+		cp -p -r $(HDF5FILES)  $(ROOT)/$(PKGROOT); \
+	)
+
+clean::
+	rm -rf $(NAME)-$(VERSION)

@@ -1,0 +1,25 @@
+<?xml version="1.0" standalone="no" ?>
+
+<kickstart>
+
+	<description>
+	VMD Configuration
+	</description>
+
+	<copyright>
+	</copyright>
+
+	<changelog>
+	</changelog>
+
+	<package>hdf5</package>
+	<package>netcdf</package>
+	<package>fltk</package>
+	<package>vmd</package>
+
+<post>
+/sbin/ldconfgi
+</post>
+
+</kickstart>
+

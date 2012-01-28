@@ -1,0 +1,5 @@
+ROLLNAME = vmd
+RELEASE = 0
+COLOR = "AliceBlue"
+
+REDHAT.ROOT = $(PWD)

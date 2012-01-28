@@ -1,0 +1,24 @@
+<?xml version="1.0" standalone="no"?>
+
+<graph>
+
+    <description>
+    VMD Roll
+
+    </description>
+
+    <copyright>
+    </copyright>
+
+    <changelog>
+    $Log: vmd.xml,v $
+    Revision 1.1  2012/01/28 03:09:36  nadya
+    initial, moving from cadd/
+
+    </changelog>
+
+    <edge from="server" to="vmd" />
+    <edge from="client" to="vmd" />
+
+</graph>
+
