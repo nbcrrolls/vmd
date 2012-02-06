@@ -1,15 +1,18 @@
 #
-# $Id: Makefile,v 1.1 2012/01/28 03:09:37 nadya Exp $
+# $Id: Makefile,v 1.2 2012/02/06 18:39:38 nadya Exp $
 #
 # @Copyright@
 # @Copyright@
 #
 # $Log: Makefile,v $
+# Revision 1.2  2012/02/06 18:39:38  nadya
+# update PKGROOT
+#
 # Revision 1.1  2012/01/28 03:09:37  nadya
 # initial, moving from cadd/
 #
 
-PKGROOT		= /opt/vmd
+PKGROOT		= /opt/hdf5
 REDHAT.ROOT     = $(CURDIR)/../../
 -include $(ROCKSROOT)/etc/Rules.mk
 include Rules.mk
