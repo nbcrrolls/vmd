@@ -2,19 +2,22 @@
 #
 # This file should remain OS independent
 #
-# $Id: bootstrap.sh,v 1.1 2012/01/28 03:09:35 nadya Exp $
+# $Id: bootstrap.sh,v 1.2 2012/02/06 18:36:56 nadya Exp $
 #
 # @Copyright@
 # @Copyright@
 #
 # $Log: bootstrap.sh,v $
+# Revision 1.2  2012/02/06 18:36:56  nadya
+# compile and install
+#
 # Revision 1.1  2012/01/28 03:09:35  nadya
 # initial, moving from cadd/
 #
 
 . ../etc/bootstrap-functions.sh
 
-install rocks-vmd
+compile_and_install rocks-vmd
 /sbin/ldconfig
 
 compile_and_install hdf5
