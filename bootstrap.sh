@@ -2,12 +2,15 @@
 #
 # This file should remain OS independent
 #
-# $Id: bootstrap.sh,v 1.2 2012/02/06 18:36:56 nadya Exp $
+# $Id: bootstrap.sh,v 1.3 2012/02/09 02:07:12 clem Exp $
 #
 # @Copyright@
 # @Copyright@
 #
 # $Log: bootstrap.sh,v $
+# Revision 1.3  2012/02/09 02:07:12  clem
+# added $ROLLSROOT variable to bootstrap-functions.sh
+#
 # Revision 1.2  2012/02/06 18:36:56  nadya
 # compile and install
 #
@@ -15,7 +18,7 @@
 # initial, moving from cadd/
 #
 
-. ../etc/bootstrap-functions.sh
+. $ROLLSROOT/etc/bootstrap-functions.sh
 
 compile_and_install rocks-vmd
 /sbin/ldconfig
