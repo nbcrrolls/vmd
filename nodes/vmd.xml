@@ -20,10 +20,6 @@
 
 <post>
 /sbin/ldconfig
-
-#this is necessary for vmd, it needs to write there 
-chmod o+wx /var/tmp/
-
 </post>
 
 </kickstart>
