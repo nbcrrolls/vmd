@@ -1,10 +1,13 @@
 #
-# $Id: Makefile,v 1.2 2012/02/06 18:39:38 nadya Exp $
+# $Id: Makefile,v 1.3 2012/02/25 01:48:34 nadya Exp $
 #
 # @Copyright@
 # @Copyright@
 #
 # $Log: Makefile,v $
+# Revision 1.3  2012/02/25 01:48:34  nadya
+# move ld configuration to vmd.config
+#
 # Revision 1.2  2012/02/06 18:39:38  nadya
 # update PKGROOT
 #
@@ -26,7 +29,6 @@ build:
 install::
 	mkdir -p $(ROOT)/$(PKGROOT)
 	mkdir -p $(ROOT)/etc/ld.so.conf.d
-	echo $(PKGROOT)/lib > $(ROOT)/etc/ld.so.conf.d/hdf5.conf
 	(                                              \
 		cd $(NAME)-$(VERSION)-$(EXT);          \
 		cp -p -r $(HDF5FILES)  $(ROOT)/$(PKGROOT); \
