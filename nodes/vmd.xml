@@ -16,9 +16,14 @@
 	<package>netcdf</package>
 	<package>fltk</package>
 	<package>vmd</package>
+	<package>rocks-vmd</package>
 
 <post>
 /sbin/ldconfig
+
+#this is necessary for vmd, it needs to write there 
+chmod o+wx /var/tmp/
+
 </post>
 
 </kickstart>
