@@ -38,4 +38,5 @@ dlopen=''
 dlpreopen=''
 
 # Directory that this library needs to be installed in:
-libdir='/mnt/scr1/release-binary/hdf5/v188/builds/koala/lib'
+libdir='/opt/hdf5/lib'
+
