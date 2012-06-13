@@ -1,10 +1,13 @@
 #
-# $Id: Makefile,v 1.1 2012/02/02 17:27:25 nadya Exp $
+# $Id: Makefile,v 1.2 2012/06/13 01:18:07 clem Exp $
 #
 # @Copyright@
 # @Copyright@
 #
 # $Log: Makefile,v $
+# Revision 1.2  2012/06/13 01:18:07  clem
+# i can't say if it really works but the binary are there, aka it compiles
+#
 # Revision 1.1  2012/02/02 17:27:25  nadya
 # move vmd to its own roll
 #
@@ -40,8 +43,8 @@ build:
 	cd $(NAME)-$(VERSION); \
 		export TCL_INCLUDE_DIR=/usr/include; \
 		export TCL_LIBRARY_DIR=/usr/lib; \
-		export PYTHON_INCLUDE_DIR=/usr/include/python2.4; \
-		export PYTHON_LIBRARY_DIR=/usr/lib/python2.4; \
+		export PYTHON_INCLUDE_DIR=/usr/include/python2.6; \
+		export PYTHON_LIBRARY_DIR=/usr/lib/python2.6; \
 		export VMDINSTALLBINDIR=${PKGROOT}/bin; \
 		export VMDINSTALLLIBRARYDIR=${PKGROOT};\
 		./configure $(VMDARCH) OPENGL FLTK NETCDF TK TCL IMD SILENT PTHREADS PYTHON ;\

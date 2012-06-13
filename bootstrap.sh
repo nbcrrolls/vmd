@@ -2,12 +2,15 @@
 #
 # This file should remain OS independent
 #
-# $Id: bootstrap.sh,v 1.3 2012/02/09 02:07:12 clem Exp $
+# $Id: bootstrap.sh,v 1.4 2012/06/13 01:18:04 clem Exp $
 #
 # @Copyright@
 # @Copyright@
 #
 # $Log: bootstrap.sh,v $
+# Revision 1.4  2012/06/13 01:18:04  clem
+# i can't say if it really works but the binary are there, aka it compiles
+#
 # Revision 1.3  2012/02/09 02:07:12  clem
 # added $ROLLSROOT variable to bootstrap-functions.sh
 #
@@ -19,6 +22,8 @@
 #
 
 . $ROLLSROOT/etc/bootstrap-functions.sh
+
+yum --enablerepo base install imake
 
 compile_and_install rocks-vmd
 /sbin/ldconfig

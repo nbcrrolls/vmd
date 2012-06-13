@@ -1,10 +1,13 @@
 #
-# $Id: Makefile,v 1.1 2012/01/28 03:09:38 nadya Exp $
+# $Id: Makefile,v 1.2 2012/06/13 01:18:06 clem Exp $
 #
 # @Copyright@
 # @Copyright@
 #
 # $Log: Makefile,v $
+# Revision 1.2  2012/06/13 01:18:06  clem
+# i can't say if it really works but the binary are there, aka it compiles
+#
 # Revision 1.1  2012/01/28 03:09:38  nadya
 # initial, moving from cadd/
 #
@@ -26,7 +29,7 @@ build:
 		export CC="/usr/bin/gcc -fPIC";			\
 		export FC=/usr/bin/gfortran;				\
 		./configure --prefix=$(PKGROOT);		\
-		make check					\
+		make \
 	)
 	
 

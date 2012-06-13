@@ -626,8 +626,8 @@ $tcl_include      = "-I$stock_tcl_include_dir";
 if ($config_tk) { $tcl_include .= " -I$stock_tk_include_dir"; }
 $tcl_library      = "-L$stock_tcl_library_dir";
 if ($config_tk) { $tcl_library .= " -L$stock_tk_library_dir"; }
-$tcl_libs         = "-ltcl8.4";  
-if ($config_tk) { $tcl_libs = "-ltk8.4 -lX11 " . $tcl_libs; }
+$tcl_libs         = "-ltcl8.5";  
+if ($config_tk) { $tcl_libs = "-ltk8.5 -lX11 " . $tcl_libs; }
 
 @tcl_cc           = ();
 @tcl_cu           = ();
@@ -1085,7 +1085,7 @@ $stock_numpy_library_dir=$ENV{"NUMPY_LIBRARY_DIR"} || "$vmd_library_dir/python/l
 $python_defines     = "-DVMDPYTHON";
 $python_include     = "-I$stock_python_include_dir -I$stock_numpy_include_dir -I$stock_numpy_library_dir";
 $python_library     = "-L$stock_python_library_dir";
-$python_libs        = "-lpython2.4 -lpthread";
+$python_libs        = "-lpython2.6 -lpthread";
 @python_h           = ('PythonTextInterp.h',
                        'VMDTkinterMenu.h',
 		       'py_commands.h',
